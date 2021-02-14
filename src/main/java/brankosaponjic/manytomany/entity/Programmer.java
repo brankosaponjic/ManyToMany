@@ -10,7 +10,7 @@ public class Programmer {
     private int id;
     private String name;
     private double salary;
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(name = "programmers_projects",
                joinColumns = @JoinColumn(name = "programmer_id", referencedColumnName = "id"),
                inverseJoinColumns = @JoinColumn(name = "project_id", referencedColumnName = "id"))
