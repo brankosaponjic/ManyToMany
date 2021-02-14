@@ -47,4 +47,13 @@ public class Programmer {
     public void setProjects(Set<Project> projects) {
         this.projects = projects;
     }
+
+    @Override
+    public String toString() {
+        return "Programmer{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", salary=" + salary +
+                '}';
+    }
 }
